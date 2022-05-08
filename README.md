@@ -2,6 +2,10 @@
 
 https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/web.html#websocket 
 
+### Getting Started
+
+https://www.baeldung.com/websockets-spring
+
 ### Introduction to WebSocket
 
 ~~~yml
@@ -27,3 +31,4 @@ Sec-WebSocket-Accept: 1qVdfYHU9hPOl4JYYNXF623Gzn0=
 Sec-WebSocket-Protocol: v10.stomp
 ~~~
 3. Protocol switch
+
