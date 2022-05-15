@@ -32,3 +32,41 @@ Sec-WebSocket-Protocol: v10.stomp
 ~~~
 3. Protocol switch
 
+
+## STOMP
+
+- https://stomp.github.io/
+- https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#websocket-stomp
+- https://stomp.github.io/stomp-specification-1.2.html
+
+~~~
+COMMAND
+header1:value1
+header2:value2
+
+Body^@
+~~~
+
+COMMAND + Header + Body 로 HTTP Message와 비슷하게 사용할 수 있다. 
+
+COMMAND는 Client냐 Server냐에 따라서 다르게 사용한다.
+
+### Handshake
+
+~~~
+CONNECT
+accept-version:1.0,1.1,1.2
+heart-beat:10000,10000
+
+^@
+ 
+CONNECTED
+version:1.2
+heart-beat:0,0
+ 
+^@
+~~~
+
+Client과 CONNECT를 보내고, Server에서 문제 없으면 CONNECTED를 보내서, Handshake를 완료한다.
+
+- https://velog.io/@gillog/Protocol-STOMP
